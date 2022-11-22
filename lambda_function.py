@@ -28,9 +28,9 @@ def lambda_handler(event, context):
 	    	countTags += 1
 	    body_text1 = body_text1 + "<br><br>Image Sevirty Counts"
 	    body_text = "<br>High ::   " + str(ecrRepoHighCount) + "<br>Medium ::  " + str(ecrRepoMediumCount) + "<br>Low :: " + str(ecrRepoLowCount)
-	    RECIPIENT = ['dhruv.s10@gmail.com', 'dhruvsingh920@gmail.com']
+	    RECIPIENT = ['dhruv@dhruvsingh.live', 'dhruv@dhruvsingh.live']
 	    if ("my-" in ecrRepoName) or ("mya-" in ecrRepoName) :
-	    	RECIPIENT = ['dhruv.s10@gmail.com', 'dhruvsingh920@gmail.com']
+	    	RECIPIENT = ['dhruv@dhruvsingh.live', 'dhruv@dhruvsingh.live']
 	    sendEmail(body_text1, body_text, ecrRepoName, RECIPIENT)
     else : 
     	print("No Severity found in image")
@@ -38,7 +38,7 @@ def lambda_handler(event, context):
     
 def sendEmail(body_text1, body_text, ecrName, RECIPIENT):
 
-	SENDER = "dhruv@dhruvsingh.live"
+	SENDER = "notification@dhruvsingh.live"
 	AWS_REGION = "us-east-1"
 	# Specify a configuration set. If you do not want to use a configuration
 	# set, comment the following variable, and the 
